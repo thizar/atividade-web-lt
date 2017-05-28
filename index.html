@@ -28,6 +28,13 @@
 
         <!-- Favicon -->
         <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+        <!-- Audio -->
+        <audio autoplay="autoplay">
+          <source src="assets/audio/audio.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
     </head>
 
     <body>
@@ -65,19 +72,20 @@
         <!-- Page title -->
         <div class="page-title top-content centered">
             <div class="page-title-text wow fadeInUp">
-            	<h1>Seja bem-vind@!</h1>
-	<form name="frm" action="principal.html" method="post">
-	<p>
-      <input placeholder="E-mail" class="contact-message form-control" type="email" name="email" value="" required>
-	</p>
-	<p>
-      <input placeholder="Senha" class="contact-message form-control" type="password" name="senha" value="" required>
-	</p>
-      		<input type="submit" name ="entrar" value = "Entrar" class="big-link-1 btn scroll-link">
-          <input type="button" name="esqueci" value="Esqueci a senha" class="big-link-2 btn scroll-link">
-     </form>
+            	<h1>Hello World!</h1>
+          	<form name="frm" action="principal.html" method="post">
+          	<p>
+                <input placeholder="E-mail" class="contact-message form-control" type="email" name="email" value="" required>
+          	</p>
+          	<p>
+                <input placeholder="Senha" class="contact-message form-control" type="password" name="senha" value="" required>
+          	</p>
+            		<input type="submit" name ="entrar" value = "Entrar" class="big-link-1 btn scroll-link">
+                <input type="button" name="esqueci" value="Esqueci a senha" class="big-link-2 btn scroll-link">
+            </form>
      		</div>
        </div>
+
         <!-- About us -->
         <div class="about-container section-container">
 	        <div class="container">
@@ -172,7 +180,7 @@
         </div>
 
 
-		<!-- Contacts -->
+		    <!-- Contacts -->
         <div class="block-2-container section-container contact-container">
 	        <div class="container">
 	            <div class="row">
@@ -181,17 +189,36 @@
 	                	<div class="divider-1 wow fadeInUp"><span></span></div>
 	                </div>
 	            </div>
-	            <div class="row">
-	            	<div class="col-sm-4 block-2-box block-2-right contact-address wow fadeInUp col-md-12">
-	            		<!-- <h3>Visit us</h3> -->
-	                    <p><span aria-hidden="true" class="icon_pin"></span>IFBA - Campus Santo Amaro</p>
-	                    <p><span aria-hidden="true" class="icon_mail"></span>Email: informatica.ifba2016@gmail.com</p>
-	            	</div>
-	            </div>
-	            <div class="contact-icon-container">
-            		<span aria-hidden="true" class="icon_mail"></span>
-            	</div>
-	        </div>
+              <div class="row">
+                <div class="col-sm-4 block-2-box block-2-left contact-form wow fadeInLeft">
+                  <h3>Mande sua mensagem...</h3>
+                      <form role="form" action="assets/contact.php" method="post">
+                        <div class="form-group">
+                          <label class="sr-only" for="contact-email">E-mail</label>
+                            <input type="email" name="email" placeholder="E-mail" class="contact-email form-control" id="contact-email" required>
+                          </div>
+                          <div class="form-group">
+                            <label class="sr-only" for="contact-message">Mensagem</label>
+                            <textarea name="message" placeholder="Mensagem..." class="contact-message form-control" id="contact-message"></textarea>
+                          </div>
+
+                          <div class="from-group">
+
+                          </div>
+
+                          <button type="submit" class="btn">Enviar</button>
+                          <button type="reset" class="btn btn-default">Cancelar</button>
+                      </form>
+                </div>
+
+                <div class="col-sm-4 block-2-box block-2-right contact-address wow fadeInUp">
+                  <h3>Onde nos encontrar</h3>
+                      <p><span aria-hidden="true" class="icon_pin"></span>IFBA - Campus Santo Amaro</p>
+                      <p><span aria-hidden="true" class="icon_mail"></span>Email: <a href="">informatica.ifba2016@gmail.com</a></p>
+                </div>
+
+              </div>
+          </div>
         </div>
 
         <!-- Footer -->
@@ -201,6 +228,7 @@
 		        	<div class="col-sm-12">
 		        		<div class="scroll-to-top">
 		        			<a href="#"><i class="fa fa-chevron-up"></i></a>
+                  <form class="form-horizontal">
 		        		</div>
 		        	</div>
 		        </div>
